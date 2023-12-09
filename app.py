@@ -16,6 +16,8 @@ weeks_per_year = 52
 months_per_year = 12
 r = 5
 area = 3.141 * (r*r)
+#This is included to show the functionality of pow(the first number is what is being multiplied, the 2nd is the exponent so 5 to the power of 2)
+area = 3.141 * pow(5, 2)
 print(f"There are {days_per_year * 27} days, {weeks_per_year * 27} weeks, or {months_per_year * 27} months in 27 years.")
 print(f"I am {age} years old.")
 print(f"The area of a circle with a radius of 5 units is {area}.")
