@@ -16,8 +16,16 @@ weeks_per_year = 52
 months_per_year = 12
 r = 5
 area = 3.141 * (r*r)
-#This is included to show the functionality of pow(the first number is what is being multiplied, the 2nd is the exponent so 5 to the power of 2)
+# This is included to show the functionality of pow(the first number is what is being multiplied, the 2nd is the exponent so 5 to the power of 2)
 area = 3.141 * pow(5, 2)
-print(f"There are {days_per_year * 27} days, {weeks_per_year * 27} weeks, or {months_per_year * 27} months in 27 years.")
+
+#1. Print your age to the console.
 print(f"I am {age} years old.")
+
+#2. Calculate and print the number of days, weeks, and months in 27 years. 
+# Don’t worry about leap years!
+print(f"There are {days_per_year * 27} days, {weeks_per_year * 27} weeks, or {months_per_year * 27} months in 27 years.")
+
+#3. Calculate and print the area of a circle with a radius of 5 units. 
+# You can be as accurate as you like with the value of pi.
 print(f"The area of a circle with a radius of 5 units is {area}.")
