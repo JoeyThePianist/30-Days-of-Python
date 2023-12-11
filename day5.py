@@ -46,4 +46,4 @@ hourly_wage = int(input("What is the hourly rate for this contractor? Rate: "))
 if hours_worked > 40:
     print(f"It looks like the contractor is owed overtime. They worked {hours_worked} hours this week. That is {hours_worked - 40} hours overtime at 110% pay. The total amount owed after overtime is ${int((hours_worked - 40) * hourly_wage * 1.10) + int(40 * hourly_wage)}.")
 else:
-    print(f"The contractor worked a total of {hours_worked} hours this week. They are to be paid at their normal rate. The total owed is ${hours_worked * hourly_wage}.")
+    print(f"The contractor worked a total of {hours_worked} hours this week. They are to be paid at their normal rate. The total amount owed is ${hours_worked * hourly_wage}.")
