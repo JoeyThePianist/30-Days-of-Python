@@ -33,7 +33,7 @@
 # computer, and it's going to play the first 100 rounds of Fizz Buzz all
 # by itself. In other words, we need to print out the first 100 items in
 # the sequence, starting from 1.
-for number in range(101):
+for number in range(1, 101):
     if number % 3 == 0 and number % 5 == 0:
         print("Fizz Buzz")
     elif number % 5 == 0:
