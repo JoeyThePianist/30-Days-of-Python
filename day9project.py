@@ -28,40 +28,32 @@
 # valid by printing a string to the console.
 card_number = int(input("Please enter your card number: ").replace(' ', ''))
 
-# Turning the card number into a string
-strify_card_num = str(card_number)
+# Turning the card number into a string to make it iterable
+card_number = str(card_number)
 
-# Grabbing the length of the card stringified card number
-x = len(strify_card_num)
+# Grabbing the length of the stringified card number
+x = len(card_number)
 
 # Removing the last digit of the card number per first part of algorithm
-new_card_num = list(strify_card_num)
-checking_digit = new_card_num.pop(-1)
+card_number = list(card_number)
+checking_digit = card_number.pop(-1)
 
 # Reversing the card number per second part of algorithm
-new_card_num.reverse()
+card_number.reverse()
 
 # Doubling numbers at even indeces per third part of algorithm
 index = 0
 
-while index < 15:
-    new_card_num[index] = int(new_card_num[index]) + int(new_card_num[index])
+while index < x -1:
+    card_number[index] = int(card_number[index]) + int(card_number[index])
+    # After doubling even indeces, we must also subtract numbers above 9 by 9 per additional section of third part
+    if int(card_number[index]) > 9:
+        card_number[index] -= 9
     index += 2
-
-# After doubling even indeces, we must also subtract numbers above 9 by 9 per additional section of third part
-index = 0
-
-while index < len(new_card_num):
-    if int(new_card_num[index]) > 9:
-        new_card_num[index] -= 9
-        index += 1
-    else:
-        index += 1
-
 # Adding together all of the results along with the checking digit per the fourth part of the algorithm
 num_sum = 0
 
-for num in new_card_num:
+for num in card_number:
     num_sum += int(num)
 
 num_sum += int(checking_digit)
@@ -71,4 +63,3 @@ if num_sum % 10 == 0:
     print("This card is valid.")
 else:
     print("This card is not valid.")
-    
