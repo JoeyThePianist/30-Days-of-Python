@@ -26,7 +26,6 @@ print(empty_set.intersection(empty_set_two))
 num_set = set()
 num_set.update(range(27, 72))
 
-print(f"The set is of type {type(num_set)}. The set contains {num_set}.")
 guess = int(input("Let's play a game. It is really easy. Guess a number and if it's in the range of numbers I have set aside here, you win! What's your guess? "))
 
 if guess in num_set:
