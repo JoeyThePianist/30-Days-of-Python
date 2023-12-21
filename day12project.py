@@ -12,22 +12,28 @@ title = None
 author = None
 year_published = None
 
+def add_book():
+    title = input("What is the title of your new book? ").strip().title()
+    author = input("Who is the author of your new book? ").strip().title()
+    year_published = int(input("What year was this book published? "))
+    book_to_add = (title, author, year_published)
+    reading_list.append(book_to_add)
+    print(f"Awesome! {title} ({year_published}) by {author} has been added to your reading list!")
+
+def view_book():
+    for book in reading_list:
+        print(f"{book[0]} ({book[2]}), by {book[1]}")
+        
 while True:
     book_buddy = input("Hi again! Would you like to 'ADD' a book to your reading list or 'VIEW' what you currently have in your list? To quit, enter 'QUIT': ")
 
     if book_buddy == "ADD":
         print("You chose to 'ADD' a new book!")
-        title = input("What is the title of your new book? ")
-        author = input("Who is the author of your new book? ")
-        year_published = input("What year was this book published? ")
-        book_to_add = (title, author, year_published)
-        reading_list.append(book_to_add)
-        print(f"Awesome! {title} ({year_published}) by {author} has been added to your reading list!")
+        add_book()
         print("Book Buddy loops so that you can view your list! Going back to the beginning...")
     elif book_buddy == "VIEW":
         print("Looks like you want to 'VIEW' your book list!")
-        for book in reading_list:
-            print(f"{book[0]} ({book[2]}), by {book[1]}")
+        view_book()
         print("Book Buddy loops so that you can add to your list! Going back to the beginning...")
     elif book_buddy == "QUIT":
         print("You chose to 'QUIT' and so we shall! Quitting Book Buddy...")
